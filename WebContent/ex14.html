@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>이벤트</h1>
+	
+	<!-- ~할때 -->	
+	<h2>2태그1</h2>
+	<h2>2태그2</h2>
+	<h2>2태그3</h2>
+
+	<h3 class="tag3">네이버</h3>
+	<h3 class="tag3">다음</h3>
+	
+
+	<div>
+		<button id = "btn"> 자바스크립트 테스트 버튼</button>
+	</div>
+	<p id="display">
+		
+	</p>
+	
+	
+	<p id="display2">
+		
+	</p>
+	
+	
+	
+	<script type="text/javascript">
+		//문서가 로딩 되었을때
+		window.onload = function(){
+			//id
+			var testBtn = document.getElementById("btn");
+			console.log(testBtn);
+			
+			var textArea = document.getElementById("display");
+			console.log(textArea);
+			
+			var textArea2 = document.getElementById("display2");
+			console.log(textArea2);
+			
+			//h2 태그 tag
+			var tagArray = document.getElementsByTagName("h2");//tagName은 Elements이다
+			console.log(tagArray);
+			
+			//h3 태그 class
+			//[<h3 class="tag3">h3태그_1</h3>,<h3 class="tag3">h3태그_2</h3>]
+	
+			var tagh3Array = document.getElementsByClassName("tag3");
+			
+			
+			
+			//기능은 정의되고 작동 클릭이 되면 작동된다.
+			testBtn.onclick = function(){
+				console.log("버튼 클릭");
+				textArea.innerHTML = "<font color = '#ff0000'>홍길동</font>";
+				
+			};
+			//h2태그 1 클릭 했을때
+			tagArray[0].onclick = function(){
+				console.log("h2태그 _1");
+				textArea.innerHTML = "<font color = '#00ff00'>h1</font>";
+			};
+			
+			tagArray[1].onclick = function(){
+				console.log("h2태그_2");
+				textArea.innerHTML = "<font color = '#0000ff'>h2</font>";
+			};
+			
+			tagArray[2].onclick = function(){
+				console.log("h2태그_3");
+				textArea.innerHTML = "<font color = '#000000'>h3</font>";
+				
+			};
+			
+			tagh3Array[0].onclick = function(){
+				console.log("네이버");
+				textArea2.innerHTML = "<a href='https://www.naver.com' target='_blank'>네이버</a>";
+				
+			}
+			
+			tagh3Array[1].onclick = function(){
+				console.log("다음");
+				textArea2.innerHTML = "<a href='https://www.daum.net'>다음</a>";
+			}
+			
+			
+		};
+	
+	
+	</script>
+</body>
+</html>

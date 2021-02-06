@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<h1>객체</h1>
+	
+	<script type="text/javascript">
+	var personList = [];
+	
+	
+	var guestbookVo = {
+		name:"이영훈",
+		password:"1234",
+		content: "안녕하세요",
+		 
+		showInfo: function(){
+			console.log(this.name + ","+ this.password + "," + this.content);
+		}
+		
+	}
+	
+	console.log(guestbookVo.name);
+	var name = guestbookVo.name
+	
+	console.log(name);
+	
+	guestbookVo.showInfo();
+	
+	console.log("=================");
+	
+	var person01 ={
+		name: "이영훈",
+		hp: "010-222-222"
+	};
+	
+	console.log(person01);
+	
+	var person02 = {};
+	
+	person02.name = "유재석";
+	person02.hp = "010-9999-9999";
+	console.log(person02);
+	
+	var person03 = {
+		name:"이효리"
+	};
+	
+	person03.hp = "010-8888-8888";
+	
+	console.log(person03);
+	
+	//리스트(배열)에 펄슨데이터 추가
+	personList.push(person01);
+	
+	personList.push(person02);
+	
+	console.log(personList);
+	
+	
+	console.log("-------------")
+	
+	for(var i = 0 ; i <personList.length; i++){
+		console.log(personList[i].name);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>변수의 범위</h1>
+	
+	<script type="text/javascript">
+		//case 1
+		/*
+		var name = "global";
+		
+		//함수 정의, 바로실행되지 않는다, 정의부분이 정리만 된다.
+		
+		function checkscope(){
+			var name ="local"; //지역변수
+			console.log(name);
+		}
+		
+		checkscope();
+		
+		console.log(name);
+		*/
+		
+		var name = "global";//전역변수
+		
+		function checkscope(){
+			name = "local";
+			name2 = "로컬";//전역변수
+		}
+		
+		checkscope();
+		console.log(name);
+		console.log(name2);
+		
+	</script>
+	
+</body>
+</html>
